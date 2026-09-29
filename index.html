@@ -7,7 +7,7 @@
 <title>AlmazovQwiz — система знаний</title>
 </head>
 <body>
-<div id="betaNotice" class="modal-backdrop"><div class="modal"><div class="modal-brand"><img src="icon.svg"><div><strong>AlmazovQwiz</strong><span>Система знаний</span></div></div><span class="eyebrow">ЗАКРЫТАЯ БЕТА · 2.7</span><h2>Знания сегодня — уверенность завтра</h2><p>Независимый учебный проект. Материалы и статистика этой версии хранятся на вашем устройстве.</p><button class="btn primary full" id="enterBeta">Войти в приложение</button></div></div>
+<div id="betaNotice" class="modal-backdrop"><div class="modal"><div class="modal-brand"><img src="icon.svg"><div><strong>AlmazovQwiz</strong><span>Система знаний</span></div></div><span class="eyebrow">ЗАКРЫТАЯ БЕТА · 2.7.2</span><h2>Знания сегодня — уверенность завтра</h2><p>Независимый учебный проект. Материалы и статистика этой версии хранятся на вашем устройстве.</p><button class="btn primary full" id="enterBeta">Войти в приложение</button></div></div>
 <div class="app-shell">
 <aside class="sidebar" id="sidebar">
   <div class="brand"><div class="brand-mark"><img src="icon.svg"></div><div><strong>AlmazovQwiz</strong><small>Система знаний</small></div></div>
@@ -20,12 +20,15 @@
     <button class="nav-item" data-view="analytics"><i data-icon="chart"></i><span>Аналитика</span></button>
     <button class="nav-item" data-view="create"><i data-icon="plus"></i><span>Создать набор</span></button>
   </nav>
-  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">BETA 2.7.0</div></div>
+  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">BETA 2.7.2</div></div>
 </aside>
 <main class="main">
 <header class="topbar"><button id="mobileMenu" class="icon-btn mobile-only" aria-label="Меню"></button><div class="search-wrap"><i data-icon="search"></i><input id="globalSearch" placeholder="Поиск по наборам, темам и терминам…"></div><div class="top-actions"><button class="icon-btn" id="dueBtn" title="Повторения"></button><button class="theme-toggle" id="themeToggle" title="Тема"></button><button class="profile-chip" data-view="profile"><span class="avatar">И</span><span><b>Илья</b><small>Студент</small></span><i data-icon="chevron"></i></button></div></header>
 <section id="view-home" class="view active"></section><section id="view-sets" class="view"></section><section id="view-textbook" class="view"></section><section id="view-study" class="view"></section><section id="view-knowledge" class="view"></section><section id="view-analytics" class="view"></section><section id="view-create" class="view"></section><section id="view-profile" class="view"></section><section id="view-help" class="view"></section>
 </main></div>
 <div id="toast" class="toast"></div><div id="modalRoot"></div>
-<script src="app.js"></script>
+<script>
+// Cache recovery: the beta must never be held hostage by an older service worker.
+(async()=>{try{if('serviceWorker' in navigator){const regs=await navigator.serviceWorker.getRegistrations();await Promise.all(regs.map(r=>r.unregister()));}if('caches' in window){const ks=await caches.keys();await Promise.all(ks.filter(k=>k.startsWith('almazovqwiz-')).map(k=>caches.delete(k)));}}catch(e){console.warn('cache recovery',e)}})();
+</script><script src="app.js?v=2.7.2"></script>
 </body></html>
