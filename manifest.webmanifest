@@ -1,1 +1,19 @@
-{"name":"AlmazovQwiz","short_name":"Qwiz","lang":"ru","start_url":"./","display":"standalone","background_color":"#07111f","theme_color":"#165dce","description":"Система знаний и интервального повторения для студентов-медиков","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "AlmazovQwiz",
+  "short_name": "Qwiz",
+  "lang": "ru",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#165dce",
+  "description": "Система знаний и интервального повторения для студентов-медиков",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "version": "2.1.0"
+}
