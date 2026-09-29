@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d2b52">
+  <meta name="description" content="AlmazovQwiz — учебная платформа для студентов. Закрытая beta.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>AlmazovQwiz — Beta</title>
+</head>
+<body>
+  <div id="betaNotice" class="modal-backdrop">
+    <div class="modal">
+      <div class="brand-mark large">AQ</div>
+      <span class="eyebrow">CLOSED BETA · 1.0</span>
+      <h2>Добро пожаловать в AlmazovQwiz</h2>
+      <p>Это тестовая версия независимого учебного проекта. AlmazovQwiz не является официальным приложением или сервисом НМИЦ им. В. А. Алмазова.</p>
+      <p class="muted">Материалы в beta используются для проверки интерфейса и механики обучения. Перед публичным релизом содержимое будет проверено и структурировано.</p>
+      <button class="btn primary full" id="enterBeta">Войти в beta</button>
+    </div>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">AQ</div>
+        <div>
+          <strong>AlmazovQwiz</strong>
+          <small>Student learning</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="home"><span class="icon">⌂</span>Главная</button>
+        <button class="nav-item" data-view="sets"><span class="icon">▣</span>Мои наборы</button>
+        <button class="nav-item" data-view="create"><span class="icon">＋</span>Создать набор</button>
+        <button class="nav-item" data-view="subjects"><span class="icon">◫</span>Предметы</button>
+        <button class="nav-item" data-view="progress"><span class="icon">◒</span>Прогресс</button>
+        <button class="nav-item" data-view="ai"><span class="icon">✦</span>Создать с ИИ</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-view="profile"><span class="icon">○</span>Профиль</button>
+        <button class="nav-item" data-view="help"><span class="icon">?</span>Помощь</button>
+        <div class="beta-badge">BETA 1.0</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="globalSearch" placeholder="Поиск по предметам, темам, наборам..." autocomplete="off">
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Уведомления">♧</button>
+          <button class="profile-chip" data-view="profile">
+            <span class="avatar">И</span>
+            <span><b>Илья</b><small>Студент</small></span>
+          </button>
+        </div>
+      </header>
+
+      <section id="view-home" class="view active"></section>
+      <section id="view-sets" class="view"></section>
+      <section id="view-subjects" class="view"></section>
+      <section id="view-progress" class="view"></section>
+      <section id="view-ai" class="view"></section>
+      <section id="view-profile" class="view"></section>
+      <section id="view-help" class="view"></section>
+      <section id="view-study" class="view"></section>
+      <section id="view-create" class="view"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
