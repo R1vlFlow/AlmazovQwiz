@@ -1,4 +1,4 @@
-# AlmazovQwiz Beta 2.2.0
+# AlmazovQwiz Beta 2.3.0
 
 Обновлённая система карточек для анатомии.
 
@@ -50,3 +50,7 @@
 - `styles.css` — интерфейс
 - `sw.js` — Service Worker
 - `assets/cards/` — текущие изображения учебника
+
+
+### GitHub Easy mode
+В этой сборке изображения из `assets/cards/` встроены непосредственно в `app.js`. Отдельно загружать файлы `assets/cards/*.jpg` не требуется.
