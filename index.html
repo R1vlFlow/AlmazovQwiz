@@ -20,7 +20,7 @@
     <button class="nav-item" data-view="analytics"><i data-icon="chart"></i><span>Аналитика</span></button>
     <button class="nav-item" data-view="create"><i data-icon="plus"></i><span>Создать набор</span></button>
   </nav>
-  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">BETA 2.7.2</div></div>
+  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">BETA 3.7.0</div></div>
 </aside>
 <main class="main">
 <header class="topbar"><button id="mobileMenu" class="icon-btn mobile-only" aria-label="Меню"></button><div class="search-wrap"><i data-icon="search"></i><input id="globalSearch" placeholder="Поиск по наборам, темам и терминам…"></div><div class="top-actions"><button class="icon-btn" id="dueBtn" title="Повторения"></button><button class="theme-toggle" id="themeToggle" title="Тема"></button><button class="profile-chip" data-view="profile"><span class="avatar">И</span><span><b>Илья</b><small>Студент</small></span><i data-icon="chevron"></i></button></div></header>
@@ -30,5 +30,5 @@
 <script>
 // Cache recovery: the beta must never be held hostage by an older service worker.
 (async()=>{try{if('serviceWorker' in navigator){const regs=await navigator.serviceWorker.getRegistrations();await Promise.all(regs.map(r=>r.unregister()));}if('caches' in window){const ks=await caches.keys();await Promise.all(ks.filter(k=>k.startsWith('almazovqwiz-')).map(k=>caches.delete(k)));}}catch(e){console.warn('cache recovery',e)}})();
-</script><script src="app.js?v=2.7.2"></script>
+</script><script src="app.js?v=3.7.0"></script>
 </body></html>
