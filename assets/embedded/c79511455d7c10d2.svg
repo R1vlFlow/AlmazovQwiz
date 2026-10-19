@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 150">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="hsl(263,72%,45%)"/><stop offset="1" stop-color="hsl(294,72%,56%)"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-opacity=".22"/></filter></defs>
+<rect width="256" height="150" rx="22" fill="url(#g)"/><circle cx="220" cy="25" r="62" fill="#fff" opacity=".08"/><circle cx="30" cy="135" r="54" fill="#fff" opacity=".06"/>
+<g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".94" filter="url(#s)"><path d="M91 99V49c0-10 14-10 14 0v39M105 91V34c0-10 14-10 14 0v56M119 90V28c0-10 14-10 14 0v62M133 94V39c0-10 14-10 14 0v64M91 99l-23-21c-9-8-20 5-13 14l29 34v28c0 19 17 32 38 32h28c27 0 47-20 47-47v-30c0-11-16-11-16 0v18h-8V93c0-10-14-10-14 0v25h-8V85c0-10-14-10-14 0v33h-8V99Z"/></g>
+<text x="18" y="126" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="800" letter-spacing="1.1">КИСТЬ</text>
+<text x="18" y="142" fill="#fff" opacity=".75" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600">запястье • фаланги</text></svg>

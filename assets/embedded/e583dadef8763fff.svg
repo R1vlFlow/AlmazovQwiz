@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 150">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="hsl(234,72%,45%)"/><stop offset="1" stop-color="hsl(277,72%,56%)"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-opacity=".22"/></filter></defs>
+<rect width="256" height="150" rx="22" fill="url(#g)"/><circle cx="220" cy="25" r="62" fill="#fff" opacity=".08"/><circle cx="30" cy="135" r="54" fill="#fff" opacity=".06"/>
+<g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".94" filter="url(#s)"><path d="M98 38c-8 13-7 26 1 38l13 22v56l-20 20c-10 10-4 25 14 25h16V98L112 75c-7-12-6-25 2-37ZM146 38c8 13 7 26-1 38l-13 22v56l20 20c10 10 4 25-14 25h-16V98l10-23c7-12 6-25-2-37Z"/></g>
+<text x="18" y="126" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="800" letter-spacing="1.1">ПЛЕЧО И ПРЕДПЛЕЧЬЕ</text>
+<text x="18" y="142" fill="#fff" opacity=".75" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600">humerus • radius • ulna</text></svg>

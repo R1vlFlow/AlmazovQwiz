@@ -1,0 +1,24 @@
+/* Accessible, compact catalogue and responsive learning dashboard. */
+:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+button:disabled{opacity:.45;cursor:not-allowed}
+.theme-toggle{display:grid;place-items:center}.theme-toggle svg{width:20px;height:20px}
+.theme-toggle::before{content:none}
+.page-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:24px}
+.page-heading .page-title{margin-top:10px}.page-heading .page-sub{margin-bottom:0}
+.home-welcome{padding:42px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(120deg,var(--surface),var(--surface2));position:relative;overflow:hidden}
+.home-welcome h1{font-size:clamp(28px,3.2vw,44px);line-height:1.18;letter-spacing:-1.4px;margin:16px 0}.home-welcome h1 span{color:var(--primary)}
+.home-welcome>p{font-size:16px;line-height:1.7;max-width:600px;color:var(--muted)}
+.daily-goal{max-width:380px;margin-top:30px;font-size:13px;color:var(--muted)}.daily-goal .progress{margin-top:10px}
+.home-stats{margin-top:22px}.home-stats .stat{border:1px solid var(--line)}
+.catalog-art{height:96px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px;border-radius:14px;background:#eaf1ff;color:#2055ad}
+.catalog-art>span{height:48px;width:48px;display:grid;place-items:center;background:#ffffff80;border-radius:14px}.catalog-art svg{width:27px;height:27px}.catalog-art small{font-size:13px;font-weight:700;max-width:150px;text-align:right}
+.catalog-art.purple{background:#efeaff;color:#65439e}.catalog-art.violet{background:#edeaff;color:#5147a3}.catalog-art.rose{background:#ffeaf0;color:#a93f62}.catalog-art.teal{background:#e1f5f0;color:#177960}.catalog-art.amber{background:#fff1de;color:#99601a}
+body.dark .catalog-art{filter:brightness(.8)}
+.catalog-card{display:flex;flex-direction:column;padding:18px;gap:0;min-width:0}.catalog-card h3{font-size:17px;line-height:1.45;margin:14px 0 8px}.catalog-card>p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:40px;font-size:13px}.catalog-card .set-meta{margin-top:16px;justify-content:space-between;font-size:12px}.catalog-card .set-footer{margin-top:16px}.catalog-card .set-footer .primary{flex:1}.catalog-card>.progress{flex:none;margin:8px 0 0;width:100%}.catalog-progress{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--muted);margin-top:auto;padding-top:12px}
+.catalog-controls .toolbar{margin:0;display:flex;gap:12px;flex-wrap:wrap}.catalog-controls .search-wrap{flex:1;min-width:220px}.catalog-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.catalog-tabs .tab{border-radius:9px}.catalog-pages{display:flex;justify-content:center;align-items:center;gap:24px;margin-top:24px}.catalog-controls{margin-bottom:18px}
+.feature-panel h2{font-size:21px}.feature-panel p{line-height:1.7}.feature-panel button{margin-top:10px}.resume-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px}.resume-banner p{margin-bottom:0}.backup-actions{display:flex;gap:10px;flex-wrap:wrap}
+.image-credit a{color:var(--primary)}.image-number{display:inline-block;padding:8px 14px;border-radius:12px;background:var(--surface2);font-weight:700;margin-bottom:12px}
+.storage-error{position:sticky;top:0;z-index:150;padding:12px 20px;background:#fff1ce;color:#543800;border-bottom:1px solid #bf8d25;font-size:14px}
+.modal,.mode-sheet{max-height:90dvh;overflow:auto}.sidebar{overflow-y:auto}.modal-backdrop{padding:16px}
+@media(max-width:760px){.home-welcome{padding:24px}.page-heading{align-items:flex-start;flex-direction:column;gap:16px}.catalog-controls .toolbar>*{width:100%}.catalog-controls .search-wrap{min-width:0}.catalog-tabs{gap:6px}.catalog-tabs .tab{font-size:12px;padding:9px}.resume-banner{align-items:flex-start;flex-direction:column}.catalog-card .set-footer{flex-wrap:wrap}.home-welcome .hero-actions{align-items:stretch;flex-direction:column}.home-welcome .hero-actions button{justify-content:center}.sidebar.open{z-index:100}.settings-row{gap:14px}.settings-row .select{max-width:170px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

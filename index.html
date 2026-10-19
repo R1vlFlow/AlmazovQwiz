@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f6f8fc"><meta name="description" content="AlmazovQwiz — система знаний и интервального повторения для студентов-медиков.">
-<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="ui.css">
 <title>AlmazovQwiz — система знаний</title>
 </head>
 <body>
-<div id="betaNotice" class="modal-backdrop"><div class="modal"><div class="modal-brand"><img src="icon.svg"><div><strong>AlmazovQwiz</strong><span>Система знаний</span></div></div><span class="eyebrow">ЗАКРЫТАЯ БЕТА · 2.7.2</span><h2>Знания сегодня — уверенность завтра</h2><p>Независимый учебный проект. Материалы и статистика этой версии хранятся на вашем устройстве.</p><button class="btn primary full" id="enterBeta">Войти в приложение</button></div></div>
+<div id="betaNotice" class="modal-backdrop"><div class="modal"><div class="modal-brand"><img src="icon.svg" alt=""><div><strong>AlmazovQwiz</strong><span>Система знаний</span></div></div><span class="eyebrow">ЗАКРЫТАЯ БЕТА · 3.8.0</span><h2>Знания сегодня — уверенность завтра</h2><p>Независимый учебный проект. Материалы и статистика этой версии хранятся на вашем устройстве.</p><button class="btn primary full" id="enterBeta">Войти в приложение</button></div></div>
 <div class="app-shell">
 <aside class="sidebar" id="sidebar">
-  <div class="brand"><div class="brand-mark"><img src="icon.svg"></div><div><strong>AlmazovQwiz</strong><small>Система знаний</small></div></div>
+  <div class="brand"><div class="brand-mark"><img src="icon.svg" alt=""></div><div><strong>AlmazovQwiz</strong><small>Система знаний</small></div></div>
   <nav class="nav">
     <button class="nav-item active" data-view="home"><i data-icon="home"></i><span>Главная</span></button>
     <button class="nav-item" data-view="sets"><i data-icon="layers"></i><span>Мои наборы</span></button>
@@ -20,15 +20,12 @@
     <button class="nav-item" data-view="analytics"><i data-icon="chart"></i><span>Аналитика</span></button>
     <button class="nav-item" data-view="create"><i data-icon="plus"></i><span>Создать набор</span></button>
   </nav>
-  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">BETA 3.7.0</div></div>
+  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">BETA 3.8.0</div></div>
 </aside>
 <main class="main">
-<header class="topbar"><button id="mobileMenu" class="icon-btn mobile-only" aria-label="Меню"></button><div class="search-wrap"><i data-icon="search"></i><input id="globalSearch" placeholder="Поиск по наборам, темам и терминам…"></div><div class="top-actions"><button class="icon-btn" id="dueBtn" title="Повторения"></button><button class="theme-toggle" id="themeToggle" title="Тема"></button><button class="profile-chip" data-view="profile"><span class="avatar">И</span><span><b>Илья</b><small>Студент</small></span><i data-icon="chevron"></i></button></div></header>
+<header class="topbar"><button id="mobileMenu" class="icon-btn mobile-only" aria-label="Меню"></button><div class="search-wrap"><i data-icon="search"></i><input id="globalSearch" aria-label="Поиск по наборам, темам и терминам" placeholder="Поиск по наборам, темам и терминам…"></div><div class="top-actions"><button class="icon-btn" id="dueBtn" aria-label="Повторения" title="Повторения"></button><button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Тема"></button><button class="profile-chip" data-view="profile"><span class="avatar">А</span><span><b>Мой профиль</b><small>Студент</small></span><i data-icon="chevron"></i></button></div></header>
 <section id="view-home" class="view active"></section><section id="view-sets" class="view"></section><section id="view-textbook" class="view"></section><section id="view-study" class="view"></section><section id="view-knowledge" class="view"></section><section id="view-analytics" class="view"></section><section id="view-create" class="view"></section><section id="view-profile" class="view"></section><section id="view-help" class="view"></section>
 </main></div>
-<div id="toast" class="toast"></div><div id="modalRoot"></div>
-<script>
-// Cache recovery: the beta must never be held hostage by an older service worker.
-(async()=>{try{if('serviceWorker' in navigator){const regs=await navigator.serviceWorker.getRegistrations();await Promise.all(regs.map(r=>r.unregister()));}if('caches' in window){const ks=await caches.keys();await Promise.all(ks.filter(k=>k.startsWith('almazovqwiz-')).map(k=>caches.delete(k)));}}catch(e){console.warn('cache recovery',e)}})();
-</script><script src="app.js?v=3.7.0"></script>
+<div id="toast" class="toast" role="status" aria-live="polite"></div><div id="modalRoot"></div>
+<script src="data/bank.js?v=3.8.0"></script><script src="library.js?v=3.8.0"></script><script src="app.js?v=3.8.0"></script><script src="ui.js?v=3.8.0"></script><script src="accessibility.js?v=3.8.0"></script><script>boot();</script>
 </body></html>

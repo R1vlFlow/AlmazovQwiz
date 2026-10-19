@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 150">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="hsl(292,72%,45%)"/><stop offset="1" stop-color="hsl(311,72%,56%)"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-opacity=".22"/></filter></defs>
+<rect width="256" height="150" rx="22" fill="url(#g)"/><circle cx="220" cy="25" r="62" fill="#fff" opacity=".08"/><circle cx="30" cy="135" r="54" fill="#fff" opacity=".06"/>
+<g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".94" filter="url(#s)"><path d="M63 62c18-18 39-20 65-8 26-12 47-10 65 8l-11 56-25 23-10 36h-34l-10-36-25-23Z"/><path d="M101 76c-10 28-4 48 27 48s37-20 27-48M83 118l-18 30M173 118l18 30"/></g>
+<text x="18" y="126" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="800" letter-spacing="1.1">ТАЗОВЫЙ ПОЯС</text>
+<text x="18" y="142" fill="#fff" opacity=".75" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600">тазовая кость</text></svg>
