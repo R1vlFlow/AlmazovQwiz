@@ -3,7 +3,7 @@ const MQ_BY_ID = new Map(MQ_TASKS.map(t=>[t.id,t]));
 function mqNormalize(value){return String(value??'').normalize('NFKC').trim().toLocaleLowerCase('ru').replace(/ё/g,'е').replace(/\s+/g,' ')}
 function mqGrade(task,value){
   if(task.type==='text')return task.answers.some(a=>mqNormalize(a)===mqNormalize(value));
-  if(['single','diagram'].includes(task.type))return Number.isInteger(value)&&value===task.answer;
+  if(['single','diagram','hotspot'].includes(task.type))return Number.isInteger(value)&&value===task.answer;
   if(!Array.isArray(value)||value.length!==task.answer.length||value.some(x=>!Number.isInteger(x)))return false;
   if(task.type==='multi')return new Set(value).size===value.length&&task.answer.every(x=>value.includes(x));
   return task.answer.every((x,i)=>value[i]===x);
@@ -29,7 +29,7 @@ function mqClean(raw){
     const task=MQ_BY_ID.get(a.ids[q.active.index]);
     if(task){const d=a.draft,limit=(task.options||task.items||task.right||[]).length;
       if(task.type==='text'&&typeof d==='string')q.active.draft=d.slice(0,500);
-      else if(['single','diagram'].includes(task.type)&&Number.isInteger(d)&&d>=0&&d<limit)q.active.draft=d;
+      else if(['single','diagram','hotspot'].includes(task.type)&&Number.isInteger(d)&&d>=0&&d<limit)q.active.draft=d;
       else if(Array.isArray(d)&&d.length<=limit&&d.every(x=>Number.isInteger(x)&&x>=-1&&x<limit)){
         if(task.type==='match'&&d.length===task.left.length)q.active.draft=d.slice();
         if(task.type==='multi'&&d.every(x=>x>=0)&&new Set(d).size===d.length)q.active.draft=d.slice();
