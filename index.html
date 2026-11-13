@@ -2,30 +2,31 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f6f8fc"><meta name="description" content="AlmazovQwiz — система знаний и интервального повторения для студентов-медиков.">
-<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="ui.css">
-<title>AlmazovQwiz — система знаний</title>
+<meta name="theme-color" content="#f6f8fc"><meta name="description" content="МедКвест — система знаний и интервального повторения для студентов-медиков.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="ui.css"><link rel="stylesheet" href="quests.css">
+<title>МедКвест — интерактивная медицина</title>
 </head>
 <body>
-<div id="betaNotice" class="modal-backdrop"><div class="modal"><div class="modal-brand"><img src="icon.svg" alt=""><div><strong>AlmazovQwiz</strong><span>Система знаний</span></div></div><span class="eyebrow">ЗАКРЫТАЯ БЕТА · 3.8.0</span><h2>Знания сегодня — уверенность завтра</h2><p>Независимый учебный проект. Материалы и статистика этой версии хранятся на вашем устройстве.</p><button class="btn primary full" id="enterBeta">Войти в приложение</button></div></div>
+<div id="betaNotice" class="modal-backdrop"><div class="modal"><div class="modal-brand"><img src="icon.svg" alt=""><div><strong>МедКвест</strong><span>Учиться с интересом</span></div></div><span class="eyebrow">РАННИЙ ДОСТУП · 1.0</span><h2>Знания сегодня — уверенность завтра</h2><p>Независимый учебный проект. Материалы и статистика этой версии хранятся на вашем устройстве.</p><button class="btn primary full" id="enterBeta">Войти в приложение</button></div></div>
 <div class="app-shell">
 <aside class="sidebar" id="sidebar">
-  <div class="brand"><div class="brand-mark"><img src="icon.svg" alt=""></div><div><strong>AlmazovQwiz</strong><small>Система знаний</small></div></div>
+  <div class="brand"><div class="brand-mark"><img src="icon.svg" alt=""></div><div><strong>МедКвест</strong><small>Учиться с интересом</small></div></div>
   <nav class="nav">
     <button class="nav-item active" data-view="home"><i data-icon="home"></i><span>Главная</span></button>
-    <button class="nav-item" data-view="sets"><i data-icon="layers"></i><span>Мои наборы</span></button>
+    <button class="nav-item" data-view="quests"><i data-icon="spark"></i><span>Квесты</span></button>
+    <button class="nav-item" data-view="sets"><i data-icon="layers"></i><span>Библиотека</span></button>
     <button class="nav-item" data-view="textbook"><i data-icon="book"></i><span>Учебник</span></button>
     <button class="nav-item" data-view="study"><i data-icon="cards"></i><span>Карточки</span></button>
     <button class="nav-item" data-view="knowledge"><i data-icon="brain"></i><span>Знания</span></button>
     <button class="nav-item" data-view="analytics"><i data-icon="chart"></i><span>Аналитика</span></button>
     <button class="nav-item" data-view="create"><i data-icon="plus"></i><span>Создать набор</span></button>
   </nav>
-  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">BETA 3.8.0</div></div>
+  <div class="sidebar-bottom"><button class="nav-item" data-view="profile"><i data-icon="user"></i><span>Профиль</span></button><button class="nav-item" data-view="help"><i data-icon="help"></i><span>Помощь</span></button><div class="support-mini" data-action="telegram"><i data-icon="telegram"></i><span><b>Поддержка</b><small>@R1vlFlow_GY</small></span></div><div class="version">МЕДКВЕСТ 1.0</div></div>
 </aside>
 <main class="main">
 <header class="topbar"><button id="mobileMenu" class="icon-btn mobile-only" aria-label="Меню"></button><div class="search-wrap"><i data-icon="search"></i><input id="globalSearch" aria-label="Поиск по наборам, темам и терминам" placeholder="Поиск по наборам, темам и терминам…"></div><div class="top-actions"><button class="icon-btn" id="dueBtn" aria-label="Повторения" title="Повторения"></button><button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Тема"></button><button class="profile-chip" data-view="profile"><span class="avatar">А</span><span><b>Мой профиль</b><small>Студент</small></span><i data-icon="chevron"></i></button></div></header>
-<section id="view-home" class="view active"></section><section id="view-sets" class="view"></section><section id="view-textbook" class="view"></section><section id="view-study" class="view"></section><section id="view-knowledge" class="view"></section><section id="view-analytics" class="view"></section><section id="view-create" class="view"></section><section id="view-profile" class="view"></section><section id="view-help" class="view"></section>
+<section id="view-home" class="view active"></section><section id="view-quests" class="view"></section><section id="view-sets" class="view"></section><section id="view-textbook" class="view"></section><section id="view-study" class="view"></section><section id="view-knowledge" class="view"></section><section id="view-analytics" class="view"></section><section id="view-create" class="view"></section><section id="view-profile" class="view"></section><section id="view-help" class="view"></section>
 </main></div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div><div id="modalRoot"></div>
-<script src="data/bank.js?v=3.8.0"></script><script src="library.js?v=3.8.0"></script><script src="app.js?v=3.8.0"></script><script src="ui.js?v=3.8.0"></script><script src="accessibility.js?v=3.8.0"></script><script>boot();</script>
+<script src="data/bank.js?v=4.0.0"></script><script src="library.js?v=4.0.0"></script><script src="app.js?v=4.0.0"></script><script src="ui.js?v=4.0.0"></script><script src="data/quests.js?v=4.0.0"></script><script src="quest-core.js?v=4.0.0"></script><script src="quests.js?v=4.0.0"></script><script src="accessibility.js?v=4.0.0"></script><script>boot();</script>
 </body></html>

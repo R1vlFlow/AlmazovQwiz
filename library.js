@@ -24,7 +24,7 @@ function catalogSets() {
   });
 }
 function checkedBackup(input) {
-  if (!input || typeof input !== 'object' || typeof input.version !== 'string' || !input.state || typeof input.state !== 'object') throw Error('Это не резервная копия AlmazovQwiz.');
+  if (!input || typeof input !== 'object' || typeof input.version !== 'string' || !input.state || typeof input.state !== 'object') throw Error('Это не резервная копия МедКвест / AlmazovQwiz.');
   const s=input.state;
   if (!Array.isArray(s.customSets)||!Array.isArray(s.sessions)||!s.cardStats||typeof s.cardStats!=='object'||Array.isArray(s.cardStats)) throw Error('В файле повреждена структура данных.');
   const idPattern=/^[a-zA-Z0-9а-яА-ЯёЁ_-]+$/;
@@ -45,6 +45,7 @@ function checkedBackup(input) {
   for(const session of s.sessions)if(!session||!Number.isFinite(session.answers)||session.answers<0||!Number.isFinite(session.correct)||session.correct<0||session.correct>session.answers||!Number.isFinite(session.date))throw Error('Некорректная история занятий.');
   const result={...defaults(),...s,cardStats:migrateStats(s.cardStats),profile:{...defaults().profile,...s.profile}};
   result.profile.dailyGoal=Math.max(1,Math.min(500,Number(result.profile.dailyGoal)||20));
+  if(typeof mqClean==='function')result.quest=mqClean(s.quest);
   result.theme=['system','light','dark'].includes(s.theme)?s.theme:'system';
   if(result.activeStudy){const a=result.activeStudy;if(!Array.isArray(a.order)||a.order.some(id=>typeof id!=='string')||!Number.isInteger(a.index)||a.index<0||!['cards','learn','test','exam','write'].includes(a.mode)||!a.session||!Number.isFinite(a.session.answers)||!Number.isFinite(a.session.correct)||!Number.isFinite(a.session.date))delete result.activeStudy;}
   return result;

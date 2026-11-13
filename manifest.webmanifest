@@ -1,12 +1,12 @@
 {
-  "name": "AlmazovQwiz",
-  "short_name": "Qwiz",
+  "name": "МедКвест — учиться с интересом",
+  "short_name": "МедКвест",
   "lang": "ru",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#07111f",
-  "theme_color": "#165dce",
-  "description": "Система знаний и интервального повторения для студентов-медиков",
+  "background_color": "#f6f8fc",
+  "theme_color": "#173c32",
+  "description": "Интерактивные маршруты для студентов-медиков",
   "icons": [
     {
       "src": "icon.svg",
@@ -15,5 +15,5 @@
       "purpose": "any maskable"
     }
   ],
-  "version": "3.8.0"
+  "version": "4.0.0"
 }
