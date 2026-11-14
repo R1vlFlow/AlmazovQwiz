@@ -58,6 +58,8 @@ test('Anatomy plates cover 22 structures with both recognition and written recal
 test('Anatomy source files and adaptations are local safe SVGs with attribution',()=>{
  const plates=JSON.parse(run('JSON.stringify(AN_PLATES)'));
  for(const p of plates){for(const file of [p.image,'assets/anatomy/'+p.id+'-source.svg']){const s=fs.readFileSync(path.join(__dirname,'..',file),'utf8');assert.match(s,/<svg/);assert(!/<script\b|<foreignObject\b|\sonload\s*=/i.test(s));}assert(p.author&&p.license&&p.licenseUrl&&p.source&&p.changes)}
+ const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../assets/anatomy/SOURCES.json'),'utf8'));
+ for(const item of manifest)for(const [file,hash] of [[item.source,item.sha256],[item.adaptation,item.adaptationSha256]])assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(__dirname,'..',file))).digest('hex'),hash);
 });
 test('Anatomy written drafts survive reload without leaking a correct answer',()=>{
  assert.equal(run('mqClean({active:{ids:["an-skull-frontal-name"],results:[],draft:"Os frontale"}}).active.draft'),'Os frontale');

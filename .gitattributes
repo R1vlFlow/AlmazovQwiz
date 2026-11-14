@@ -1,0 +1,2 @@
+# Preserve downloaded scientific plates byte-for-byte for provenance checks.
+assets/anatomy/*.svg -text
