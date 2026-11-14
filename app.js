@@ -1,4 +1,4 @@
-const APP_VERSION='4.1.0', CACHE_PREFIX='almazovqwiz-', BUILD_KEY='aq_app_version', THEME_KEY='aq_theme', DB_NAME='almazovqwiz_library', DB_VERSION=2;
+const APP_VERSION='4.2.0', CACHE_PREFIX='almazovqwiz-', BUILD_KEY='aq_app_version', THEME_KEY='aq_theme', DB_NAME='almazovqwiz_library', DB_VERSION=2;
 const SUBJECTS=[['Анатомия','bone'],['Гистология','cell'],['Биология','dna'],['Латинский язык','latin']];
 const DEFAULT_SETS=[];
 const GRANULAR_SETS=[];

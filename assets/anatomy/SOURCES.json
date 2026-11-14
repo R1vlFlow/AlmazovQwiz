@@ -1,0 +1,26 @@
+[
+  {
+    "id": "skull",
+    "retrieved": "2026-11-14",
+    "source": "assets/anatomy/skull-source.svg",
+    "sha256": "3a97d1a7026b2b9ce5b354b51e43f07b3f5b93edf0052bff366740d581294a84",
+    "adaptation": "assets/anatomy/skull.svg",
+    "adaptationSha256": "ba81a4d899dbf18a4f5b063c05e95c23ba9168ffaaa66d1d1023d42d925594c4"
+  },
+  {
+    "id": "arm",
+    "retrieved": "2026-11-14",
+    "source": "assets/anatomy/arm-source.svg",
+    "sha256": "1daef4de0f375f4764e0114d0e0f5271505181ca986a90bfab8d26e56aa5011e",
+    "adaptation": "assets/anatomy/arm.svg",
+    "adaptationSha256": "f4fab5b592bc142760290be1831dc366c117a5e25dc02953913e64723dd98cb9"
+  },
+  {
+    "id": "heart",
+    "retrieved": "2026-11-14",
+    "source": "assets/anatomy/heart-source.svg",
+    "sha256": "f0d4641f56f6c63e143bed38916a8d7df9f7d304148e03aae1f4050a38db1ab6",
+    "adaptation": "assets/anatomy/heart.svg",
+    "adaptationSha256": "a5492f61bddc5c9f64987b1c7acaba8577cbf7783f1a149229f20a22ef81f7e7"
+  }
+]
