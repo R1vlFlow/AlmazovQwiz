@@ -34,7 +34,7 @@ test('Streak counts calendar days',()=>{
 });
 test('Actual product bootstrap preserves old progress and backups include quests',()=>{
  const {setup}=require('./helpers.cjs');const app=setup(JSON.stringify({betaAccepted:true,sessions:[{date:1,answers:3,correct:2}],customSets:[],cardStats:{}}),true);
- assert.match(app.element('view-home').innerHTML,/Как будем учиться/);assert.equal(app.run('state.sessions[0].answers'),3);
+ assert.match(app.element('view-home').innerHTML,/Анатомия человека/);assert.equal(app.run('state.sessions[0].answers'),3);
  app.run('mqStart("latin");mqSet(0);mqRecord(state.quest,mqTask(),0)');
  assert.equal(app.run('checkedBackup(JSON.parse(JSON.stringify({version:APP_VERSION,state}))).quest.solved.length'),1);
  assert.equal(app.run('checkedBackup({version:"3.8.0",state:defaults()}).quest.solved.length'),0);
@@ -45,10 +45,10 @@ test('Visual tasks have valid points, no out-of-bounds answers, and persist sele
  assert.equal(run('mqClean({active:{ids:["v1"],results:[],draft:1}}).active.draft'),1);
  assert(!run('mqGrade(MQ_BY_ID.get("v1"),0)'));assert(run('mqGrade(MQ_BY_ID.get("v1"),1)'));
 });
-test('Card self-grading requires reveal and rejects a stale double click',()=>{
+test('Card browsing never changes answer statistics',()=>{
  const {setup}=require('./helpers.cjs');const app=setup('{}',true);
  app.run('openStudy(allSets()[0].id,"cards");vlGrade("good",0)');assert.equal(app.run('current.session.answers'),0);
- app.run('current.revealed=true;vlGrade("good",0);vlGrade("good",0)');assert.equal(app.run('current.session.answers'),1);assert.equal(app.run('current.index'),1);
+ app.run('current.revealed=true;vlGrade("good",0);vlGrade("good",0)');assert.equal(app.run('current.session.answers'),0);assert.equal(app.run('current.index'),0);
 });
 test('Anatomy plates cover 22 structures with both recognition and written recall',()=>{
  assert.equal(run('AN_PLATES.reduce((n,p)=>n+p.regions.length,0)'),22);
