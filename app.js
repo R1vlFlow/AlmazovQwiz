@@ -1,4 +1,4 @@
-const APP_VERSION='4.3.0', CACHE_PREFIX='almazovqwiz-', BUILD_KEY='aq_app_version', THEME_KEY='aq_theme', DB_NAME='almazovqwiz_library', DB_VERSION=2;
+const APP_VERSION='4.3.1', CACHE_PREFIX='almazovqwiz-', BUILD_KEY='aq_app_version', THEME_KEY='aq_theme', DB_NAME='almazovqwiz_library', DB_VERSION=2;
 const SUBJECTS=[['Анатомия','bone'],['Гистология','cell'],['Биология','dna'],['Латинский язык','latin']];
 const DEFAULT_SETS=[];
 const GRANULAR_SETS=[];
@@ -237,7 +237,7 @@ function randomJump(){
 }
 
 
-function boot(){applyTheme();hydrateIcons();home();document.getElementById('mobileMenu').innerHTML=icon('layers');if(state.betaAccepted)document.getElementById('betaNotice').style.display='none';if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(e=>console.warn('Offline cache unavailable',e));try{localStorage.setItem(BUILD_KEY,APP_VERSION)}catch{}}
+function boot(){applyTheme();hydrateIcons();home();document.getElementById('mobileMenu').innerHTML=icon('layers');if(state.betaAccepted)document.getElementById('betaNotice').style.display='none';if(typeof checkAppUpdate==='function')checkAppUpdate();try{localStorage.setItem(BUILD_KEY,APP_VERSION)}catch{}}
 
 
 /* ==================== МедКвест 2.4.0 Professional Learning Layer ==================== */
